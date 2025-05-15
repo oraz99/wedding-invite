@@ -1,74 +1,95 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Свадебное приглашение</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Свадьба Оразмурата и Бахар</title>
   <style>
-    body {
-      font-family: 'Playfair Display', serif;
+    body, html {
       margin: 0;
       padding: 0;
-      background: #f7f9f5;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url('fon.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-    header {
-      background: linear-gradient(#d0eee1, #ffffff);
-      padding: 40px;
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-    }
-    header h1 {
-      color: #3a5a40;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #5a5a5a;
-    }
-    section {
       padding: 20px;
-      max-width: 800px;
-      margin: auto;
     }
-    .countdown {
-      font-size: 1.5em;
-      text-align: center;
-      margin-bottom: 30px;
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
     }
-    form {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+
+    .hero img {
+      max-height: 80vh;
+      width: auto;
+      border-radius: 20px;
+      z-index: 2;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
     }
-    input, textarea, button {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+
+    .hero-text {
+      position: absolute;
+      z-index: 3;
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
     }
-    button {
-      background: #3a5a40;
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0 0 10px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 18px;
+      background-color: #a2c2b9;
       color: white;
-      font-size: 1em;
       border: none;
-    }
-    .map {
-      margin: 30px 0;
-    }
-    .contacts, .dresscode {
-      background: #ffffff;
-      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-bottom: 30px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #87aa9e;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Оразмурат & Бахар</h1>
-    <p>С радостью приглашаем вас на нашу свадьбу!</p>
-  </
+
+  <div class="hero">
+    <img src="photo.jpg" alt="Оразмурат и Бахар">
+    <div class="hero-text">
+      <h1>Оразмурат & Бахар</h1>
+      <p>С любовью приглашаем вас на нашу свадьбу</p>
+      <p>31 августа 2025</p>
+      <p>Банкетный зал «Парахат», Ашхабад</p>
+      <a href="#rsvp" class="btn">Подтвердить участие</a>
+    </div>
+  </div>
+
+</body>
+</html>
